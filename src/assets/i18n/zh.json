@@ -1,3 +1,10 @@
 {
-  "HELLO":"你好"
+  "HELLO":"你好",
+  "WELCOME":"歡迎來到",
+  "INPUT":{
+    "TYPE_HERE_YOUR":"在這裡輸入你的"
+  },
+  "NOTE":{
+    "BYPASSES_SANITIZATION":"安全說明：這繞過了 Angular DOM 安全機制"
+  }
 }

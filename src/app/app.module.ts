@@ -1,11 +1,12 @@
+import { MaterialModule } from './material/material.module';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { KatexModule } from 'ng-katex';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { I18nModule } from './i18n/i18n.module';
 import { MathKatexModule } from './core/math-katex/math-katex.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { MathKatexModule } from './core/math-katex/math-katex.module';
     FormsModule,
     I18nModule,
     AppRoutingModule,
-    MathKatexModule
+    MathKatexModule,
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

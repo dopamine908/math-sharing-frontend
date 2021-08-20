@@ -1,10 +1,9 @@
-
-
+<!--
 <div class="container mx-auto px-4">
   <h1>
-    Welcome to <a target="_blank" [href]="url">{{title}}</a> demo app!
+    Welcome to <a target="_blank" [href]="url">{{title}}</a> demo app {{ 'HELLO' | translate }}!
   </h1>
-  <div>{{ 'HELLO' | translate }}</div>
+
   <b>Equation: </b>
   <h2>Type here your equation:</h2>
   <p><input type="text" [(ngModel)]="equation"></p>
@@ -20,5 +19,41 @@
   <b>HTML: (Security Note: this bypasses Angular DOM Sanitization)</b>
   <h2>Type here your HTML:</h2>
   <p><textarea [(ngModel)]="html" rows="6"></textarea></p>
+  <ng-katex-html [html]="html"></ng-katex-html>
+</div> -->
+<mat-toolbar [color]="'primary'" >
+  <mat-toolbar-row >
+    <dir class="px-6 m-0">
+      <span>Math</span>
+    </dir>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="container px-9 mt-4">
+  <h1>
+    {{'WELCOME' | translate}} <a target="_blank" [href]="url">{{title}}</a>  {{ 'HELLO' | translate }}!
+  </h1>
+  <!-- Equation -->
+  <h2 class="font-bold font-serif">Equation: </h2>
+  <mat-form-field appearance="outline">
+    <mat-label>Type here your equation:</mat-label>
+    <input matInput type="text" [(ngModel)]="equation">
+  </mat-form-field>
+  <hr />
+  <!-- Paragraph -->
+  <h2 class="font-bold font-serif">Paragraph: </h2>
+  <mat-form-field appearance="outline" class="w-full">
+    <mat-label>{{'INPUT.TYPE_HERE_YOUR' | translate}} Paragraph:</mat-label>
+    <textarea matInput [(ngModel)]="paragraph" rows="6">
+    </textarea>
+  </mat-form-field>
+  <ng-katex-paragraph [paragraph]="paragraph"></ng-katex-paragraph>
+  <hr />
+  <!-- HTML -->
+  <h2 class="font-bold font-serif">HTML: ({{'NOTE.BYPASSES_SANITIZATION' | translate}})</h2>
+  <mat-form-field appearance="outline" class="w-full">
+    <mat-label>{{'INPUT.TYPE_HERE_YOUR' | translate}} HTML:<</mat-label>
+    <textarea matInput [(ngModel)]="html" rows="6">
+      </textarea>
+  </mat-form-field>
   <ng-katex-html [html]="html"></ng-katex-html>
 </div>
