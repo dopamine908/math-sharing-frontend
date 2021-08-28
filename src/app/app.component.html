@@ -14,16 +14,17 @@
   <h2 class="font-bold font-serif">Equation: </h2>
   <mat-form-field appearance="outline">
     <mat-label>Type here your equation:</mat-label>
-    <input matInput type="text" [(ngModel)]="equation">
+    <input matInput type="text" #katexInput [(ngModel)]="equation">
   </mat-form-field>
   <br>
   <ng-katex  [equation]="equation" [options]="options"></ng-katex>
+  <button (click)="setSelectionWithAddKatex(paragraphTextArea)">Set Caret Position</button>
   <hr />
   <!-- Paragraph -->
   <h2 class="font-bold font-serif">Paragraph: </h2>
   <mat-form-field appearance="outline" class="w-full">
     <mat-label>{{'INPUT.TYPE_HERE_YOUR' | translate}} Paragraph:</mat-label>
-    <textarea matInput [(ngModel)]="paragraph" rows="6">
+    <textarea matInput [(ngModel)]="paragraph" rows="6" #paragraphTextArea>
     </textarea>
   </mat-form-field>
   <ng-katex-paragraph [paragraph]="paragraph"></ng-katex-paragraph>
