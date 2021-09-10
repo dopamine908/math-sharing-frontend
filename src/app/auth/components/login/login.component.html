@@ -1,0 +1,14 @@
+<div class="flex w-full h-full">
+  <div [style.width.px]="loginBgWidth" class="">
+    <img class="w-full h-full" src="assets/image/login-bg.png" alt="">
+  </div>
+  <div class="flex flex-col justify-center items-center" [ngStyle]="{'width': 'calc(100% - '+ loginBgWidth +'px)'}">
+    <p class="text-7xl font-black">
+      LOGIN
+    </p>
+    <p>
+      請使用 google 帳號進行登入
+    </p>
+    <button mat-flat-button color="primary">Google login</button>
+  </div>
+</div>
