@@ -5,6 +5,7 @@ import { MainComponent } from './components/main/main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from './components/search/search.component';
 import { MaterialModule } from '../material/material.module';
+import { AdvancedSearchModule } from '../advanced-search/advanced-search.module';
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
     CommonModule,
     HeaderModule,
     MaterialModule,
+    AdvancedSearchModule,
     RouterModule.forChild(routes),
   ]
 })
