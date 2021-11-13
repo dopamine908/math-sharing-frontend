@@ -1,0 +1,31 @@
+<div class="w-full px-5 box-border">
+  <p class="mb-3 text-green-700">進階搜尋篩選項目</p>
+  <div class="shadow-lg p-3 max-h-96">
+    <mat-list role="list" class="overflow-auto">
+      <mat-list-item role="listitem">
+        <mat-checkbox [color]="'primary'">國中數學</mat-checkbox>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-checkbox [color]="'primary'">高中數學</mat-checkbox>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-checkbox [color]="'primary'">負數</mat-checkbox>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-list role="list" class="bg-gray-50">
+          <mat-list-item role="listitem">
+            <mat-checkbox [color]="'primary'">負數的意義</mat-checkbox>
+          </mat-list-item>
+        </mat-list>
+      </mat-list-item>
+    </mat-list>
+    <div class="mt-2 flex justify-end px-5">
+      <span class="mr-2">
+        <button mat-raised-button class="">清除</button>
+      </span>
+      <span>
+        <button mat-raised-button color="accent">搜尋</button>
+      </span>
+    </div>
+  </div>
+</div>

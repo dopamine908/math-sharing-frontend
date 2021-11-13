@@ -6,6 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from './components/search/search.component';
 import { MaterialModule } from '../material/material.module';
 import { AdvancedSearchModule } from '../advanced-search/advanced-search.module';
+import { AdvancedPanelComponent } from './components/advanced-panel/advanced-panel.component';
+import { PanelControllerService } from './service/panel-controller.service';
 
 const routes: Routes = [
   {
@@ -17,7 +19,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     MainComponent,
-    SearchComponent
+    SearchComponent,
+    AdvancedPanelComponent
   ],
   imports: [
     CommonModule,
@@ -25,6 +28,9 @@ const routes: Routes = [
     MaterialModule,
     AdvancedSearchModule,
     RouterModule.forChild(routes),
+  ],
+  providers: [
+    PanelControllerService
   ]
 })
 export class MainModule { }

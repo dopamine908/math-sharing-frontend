@@ -7,7 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class AdvancedSearchComponent implements OnInit {
   @Input() ngModel: any;
-  @Output() ngModelChange= new EventEmitter()
+  @Output() ngModelChange = new EventEmitter();
+  @Output() onClickAdvanced = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
@@ -15,5 +16,8 @@ export class AdvancedSearchComponent implements OnInit {
   onChange(e:Event){
     console.log(this.ngModel)
     this.ngModelChange.emit(this.ngModel);
+  }
+  onClick(){
+    this.onClickAdvanced.emit();
   }
 }

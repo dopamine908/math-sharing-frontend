@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PanelControllerService } from '../../service/panel-controller.service';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public panelService: PanelControllerService
+  ) { }
 
   ngOnInit(): void {
   }
