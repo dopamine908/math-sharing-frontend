@@ -1,9 +1,11 @@
-<div class="w-full px-5 box-border h-full">
+<div class="w-full px-5 box-border h-3/4">
   <p class="mb-3 text-green-700">進階搜尋篩選項目</p>
-  <div class="shadow-lg p-3 max-h-96 h-full">
-    <mat-list role="list" class=" h-4/5">
-      <ng-container *ngTemplateOutlet="recursiveListTemplate; context:{ list: list }"></ng-container>
-    </mat-list>
+  <div class="shadow-lg p-3 h-5/6" >
+    <div class=" overflow-auto h-5/6">
+      <mat-list role="list">
+        <ng-container *ngTemplateOutlet="recursiveListTemplate; context:{ list: list }"></ng-container>
+      </mat-list>
+    </div>
     <div class="mt-2 flex justify-end px-5">
       <span class="mr-2">
         <button mat-raised-button class="">清除</button>
@@ -21,9 +23,8 @@
       <mat-list role="list" *ngIf="item.children && item.children.length > 0">
         <ng-container *ngTemplateOutlet="recursiveListTemplate; context:{ list: item.children }">
         </ng-container>
+        <!-- <mat-divider></mat-divider> -->
       </mat-list>
-      <!-- <mat-divider></mat-divider> -->
     </div>
   </mat-list-item>
-
 </ng-template>

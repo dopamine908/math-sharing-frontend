@@ -31,6 +31,39 @@ export class AdvancedPanelComponent implements OnInit {
           }
         ]
       }]
+    },
+    {
+      name: "數線與幾何",
+      children: [{
+        name: "幾何學",
+        children: [
+          {
+            name: "畢氏定理"
+          }
+        ]
+      }]
+    },
+    {
+      name: "數線與幾何",
+      children: [{
+        name: "幾何學",
+        children: [
+          {
+            name: "畢氏定理"
+          }
+        ]
+      }]
+    },
+    {
+      name: "數線與幾何",
+      children: [{
+        name: "幾何學",
+        children: [
+          {
+            name: "畢氏定理"
+          }
+        ]
+      }]
     }
   ];
   constructor() { }
